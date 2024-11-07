@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Horoscope Results</title>
+        <style>
+            body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #8e44ad;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Your Horoscope</h1>
+        <p>Hello {{ name }}! Your horoscope sign is {{ sign }}.</p>
+        <p>Your personality trait: {{ personality }}</p>
+    </body>
+</html>

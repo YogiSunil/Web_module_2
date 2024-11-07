@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Horoscope</title>
+        <style>
+            body {
+    font-family: 'Garamond', serif;
+    background-color: #faf3dd;
+    color: #6d6875;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #b5838d;
+}
+
+form {
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+select,
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+    background-color: #b5838d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #a56976;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Find Your Horoscope</h1>
+        <form action="/horoscope_results" method="GET">
+            <label>Enter your name:
+                <input type="text" name="users_name">
+            </label>
+            <br><br>
+            <label>Select your horoscope sign:
+                <select name="horoscope_sign">
+                    <option value="aries">Aries</option>
+                    <option value="taurus">Taurus</option>
+                    <option value="gemini">Gemini</option>
+                    <option value="cancer">Cancer</option>
+                    <option value="leo">Leo</option>
+                    <option value="virgo">Virgo</option>
+                    <option value="libra">Libra</option>
+                    <option value="scorpio">Scorpio</option>
+                    <option value="sagittarius">Sagittarius</option>
+                    <option value="capricorn">Capricorn</option>
+                    <option value="aquarius">Aquarius</option>
+                    <option value="pisces">Pisces</option>
+                </select>
+            </label>
+            <br><br>
+            <input type="submit" value="Get Horoscope">
+        </form>
+    </body>
+</html>

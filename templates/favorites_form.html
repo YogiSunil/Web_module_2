@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favorites</title>
+        <style>
+          body {
+    font-family: 'Lucida Sans', sans-serif;
+    background-color: #eaf2f8;
+    color: #34495e;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #1abc9c;
+}
+
+form {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #16a085;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Choose Your Favorites</h1>
+        <form action="/favorites_results" method="GET">
+            <fieldset>
+                <legend>Your Favorites:</legend>
+                <label>What is your favorite color?
+                    <input type="text" name="color">
+                </label>
+                <label>What is your favorite animal?
+                    <input type="text" name="animal">
+                </label>
+                <label>What is your favorite city?
+                    <input type="text" name="city">
+                </label>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator Results</title>
+        <style>
+            body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #c9d6ff, #e2e2e2);
+    color: #2c3e50;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Calculation Result</h1>
+        <p>{{ operand1 }} {{ operation }} {{ operand2 }} = {{ result }}</p>
+    </body>
+</html>

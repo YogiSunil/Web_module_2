@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Secret Message</title>
+        <style>
+            body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f8cdda, #1d2b64);
+    color: #fdfdfd;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #e1bee7;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #e91e63;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #c2185b;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Enter a Secret Message</h1>
+        <form action="/message_results" method="POST">
+            <label>
+                Enter your message:
+                <textarea name="message" rows="4" cols="50"></textarea>
+            </label>
+            <br><br>
+            <input type="submit" value="Submit Secret Message">
+        </form>
+        
+        
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body {
+    font-family: 'Courier New', monospace;
+    background-color: #f0f0f5;
+    color: #2d3436;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #0984e3;
+}
+
+form {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="text"],
+select,
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+    background-color: #0984e3;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0652dd;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <form action="/calculator_results" method="GET">
+            <label>Enter the first number:
+                <input type="text" name="operand1">
+            </label>
+            <br><br>
+            <label>Enter the second number:
+                <input type="text" name="operand2">
+            </label>
+            <br><br>
+            <label>Choose operation:
+                <select name="operation">
+                    <option value="add">Add</option>
+                    <option value="subtract">Subtract</option>
+                    <option value="multiply">Multiply</option>
+                    <option value="divide">Divide</option>
+                </select>
+            </label>
+            <br><br>
+            <input type="submit" value="Calculate">
+        </form>
+    </body>
+</html>

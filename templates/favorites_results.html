@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Favorites Results</title>
+        <style>
+            body {
+    font-family: 'Verdana', sans-serif;
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #1abc9c;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px #ccc;
+}
+
+p {
+    font-size: 20px;
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: inline-block;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Your Favorite Things!</h1>
+        <p>Your favorite color is: {{ color }}</p>
+        <p>Your favorite animal is: {{ animal }}</p>
+        <p>Your favorite city is: {{ city }}</p>
+    </body>
+</html>

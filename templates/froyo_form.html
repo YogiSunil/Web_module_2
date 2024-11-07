@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Froyo Ordering</title>
+        <style>
+            body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background: linear-gradient(135deg, #fff1eb, #ace0f9);
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #e17055;
+}
+
+form {
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: none;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+select,
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #e17055;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #d65c3a;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Choose Your Froyo Order</h1>
+        <form action="/froyo_results" method="GET">
+            <fieldset>
+                <legend>What would you like on your Froyo?</legend>
+                <label for="flavor">Flavor:</label>
+                <select name="flavor" id="flavor">
+                    <option value="chocolate">Chocolate</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="strawberry">Strawberry</option>
+                    <option value="mint">Mint</option>
+                </select>
+                <br><br>
+
+                <label for="toppings">Toppings:</label>
+                <select name="toppings" id="toppings" multiple>
+                    <option value="chocolate_chip">Chocolate Chip</option>
+                    <option value="sprinkles">Sprinkles</option>
+                    <option value="oreo">Oreo</option>
+                    <option value="whipped_cream">Whipped Cream</option>
+                </select>
+                <br><br>
+
+                <input type="submit" value="Submit Order">
+            </fieldset>
+        </form>
+    </body>
+</html>

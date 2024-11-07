@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Secret Message Results</title>
+        <style>
+            body {
+    font-family: 'Lucida Sans', sans-serif;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    padding: 20px;
+    color: #444;
+    text-align: center;
+}
+
+h1 {
+    color: #d35400;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+        </style>
+    </head>
+    <body>
+        <h1>Your Secret Message</h1>
+        <p>Original Message: {{ secret_message }}</p> <!-- This should show the original input -->
+        <p>Sorted Message: {{ sorted_message }}</p>
+    </body>
+</html>
