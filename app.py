@@ -71,18 +71,25 @@ def message_results():
 
 
 @app.route('/calculator')
-def calculator():
-    """Shows a form to enter 2 numbers and an operation."""
+def calculator_form():
     return render_template('calculator_form.html')
 
-@app.route('/calculator_results')
+@app.route('/calculator_results', methods=['GET'])
 def calculator_results():
-    """Shows the user the result of their calculation."""
     try:
-        operand1 = float(request.args.get('operand1'))
-        operand2 = float(request.args.get('operand2'))
+        operand1 = request.args.get('operand1')
+        operand2 = request.args.get('operand2')
         operation = request.args.get('operation')
 
+        # Check if all parameters are provided
+        if not operand1 or not operand2 or not operation:
+            return render_template('calculator_results.html', error="Error: Missing operands or operation.")
+
+        # Convert operands to float
+        operand1 = int(operand1)
+        operand2 = int(operand2)
+
+        # Perform the calculation based on the selected operation
         if operation == 'add':
             result = operand1 + operand2
         elif operation == 'subtract':
@@ -90,16 +97,17 @@ def calculator_results():
         elif operation == 'multiply':
             result = operand1 * operand2
         elif operation == 'divide':
-            if operand2 != 0:
-                result = operand1 / operand2
-            else:
-                result = "Error: Division by zero"
+            if operand2 == 0:
+                return render_template('calculator_results.html', error="Error: Division by zero is not allowed.")
+            result = operand1 / operand2
         else:
-            result = "Invalid operation"
-        
+            return render_template('calculator_results.html', error="Error: Invalid operation.")
+
+        # Return the result
         return render_template('calculator_results.html', result=result, operand1=operand1, operand2=operand2, operation=operation)
-    except (ValueError, TypeError):
-        return "Error: Invalid input"
+
+    except ValueError:
+        return render_template('calculator_results.html', error="Error: Invalid input. Please provide numeric values for operands.")
 
 @app.route('/horoscope')
 def horoscope():
@@ -127,9 +135,11 @@ def horoscope_results():
         'pisces': 'Compassionate and artistic'
     }
 
+    lucky_number = random.randint(1, 100)
+
     personality = HOROSCOPE_PERSONALITIES.get(sign, "Unknown sign")
-    
-    return render_template('horoscope_results.html', name=name, sign=sign, personality=personality)
+
+    return render_template('horoscope_results.html', name=name, sign=sign, personality=personality, lucky_number=lucky_number)
 
 
 if __name__ == '__main__':
